@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "nama": "Kasus 1: Mahasiswa Muda Sangat Sehat",
+    "target": "rendah",
+    "actual": "rendah",
+    "skor": {
+      "ginjal_kronis": 16.5,
+      "batu_ginjal": 16.5,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Ginjal Kronis",
+    "skor_tertinggi": 16.5,
+    "passed": true
+  },
+  {
+    "id": 2,
+    "nama": "Kasus 2: Dewasa Muda Sedikit Kurang Minum",
+    "target": "rendah",
+    "actual": "rendah",
+    "skor": {
+      "ginjal_kronis": 16.5,
+      "batu_ginjal": 18.2,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Batu Ginjal",
+    "skor_tertinggi": 18.2,
+    "passed": true
+  },
+  {
+    "id": 3,
+    "nama": "Kasus 3: Lansia Aktif Pola Hidup Baik",
+    "target": "rendah",
+    "actual": "rendah",
+    "skor": {
+      "ginjal_kronis": 16.5,
+      "batu_ginjal": 16.5,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Ginjal Kronis",
+    "skor_tertinggi": 16.5,
+    "passed": true
+  },
+  {
+    "id": 4,
+    "nama": "Kasus 4: Pekerja Sehat Sesekali Konsumsi Asin",
+    "target": "rendah",
+    "actual": "rendah",
+    "skor": {
+      "ginjal_kronis": 16.5,
+      "batu_ginjal": 18.2,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Batu Ginjal",
+    "skor_tertinggi": 18.2,
+    "passed": true
+  },
+  {
+    "id": 5,
+    "nama": "Kasus 5: Riwayat Hipertensi Awal Terkontrol",
+    "target": "waspada",
+    "actual": "waspada",
+    "skor": {
+      "ginjal_kronis": 54.0,
+      "batu_ginjal": 18.2,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Ginjal Kronis",
+    "skor_tertinggi": 54.0,
+    "passed": true
+  },
+  {
+    "id": 6,
+    "nama": "Kasus 6: Pekerja Kantor Kurang Minum Parah",
+    "target": "waspada",
+    "actual": "waspada",
+    "skor": {
+      "ginjal_kronis": 16.5,
+      "batu_ginjal": 53.8,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Batu Ginjal",
+    "skor_tertinggi": 53.8,
+    "passed": true
+  },
+  {
+    "id": 7,
+    "nama": "Kasus 7: Gejala Anyang-anyangan Ringan",
+    "target": "waspada",
+    "actual": "waspada",
+    "skor": {
+      "ginjal_kronis": 16.5,
+      "batu_ginjal": 18.2,
+      "infeksi_ginjal": 54.0
+    },
+    "dominan": "Infeksi Ginjal / Saluran Kemih",
+    "skor_tertinggi": 54.0,
+    "passed": true
+  },
+  {
+    "id": 8,
+    "nama": "Kasus 8: Nyeri Pinggang Ringan Sedang & Urin Keruh",
+    "target": "waspada",
+    "actual": "waspada",
+    "skor": {
+      "ginjal_kronis": 16.5,
+      "batu_ginjal": 54.0,
+      "infeksi_ginjal": 30.1
+    },
+    "dominan": "Batu Ginjal",
+    "skor_tertinggi": 54.0,
+    "passed": true
+  },
+  {
+    "id": 9,
+    "nama": "Kasus 9: Lansia dengan Kelelahan & Bengkak Ringan",
+    "target": "waspada",
+    "actual": "waspada",
+    "skor": {
+      "ginjal_kronis": 54.0,
+      "batu_ginjal": 18.2,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Ginjal Kronis",
+    "skor_tertinggi": 54.0,
+    "passed": true
+  },
+  {
+    "id": 10,
+    "nama": "Kasus 10: Sering Minum Obat NSAID Nyeri Sendi",
+    "target": "waspada",
+    "actual": "waspada",
+    "skor": {
+      "ginjal_kronis": 53.8,
+      "batu_ginjal": 18.2,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Ginjal Kronis",
+    "skor_tertinggi": 53.8,
+    "passed": true
+  },
+  {
+    "id": 11,
+    "nama": "Kasus 11: Gejala Berat Ginjal Kronis (Hipertensi, Bengkak, Busa Urin)",
+    "target": "tinggi",
+    "actual": "tinggi",
+    "skor": {
+      "ginjal_kronis": 74.8,
+      "batu_ginjal": 53.8,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Ginjal Kronis",
+    "skor_tertinggi": 74.8,
+    "passed": true
+  },
+  {
+    "id": 12,
+    "nama": "Kasus 12: Kolik Ginjal Tajam + Urin Merah (Batu Ginjal Berat)",
+    "target": "tinggi",
+    "actual": "tinggi",
+    "skor": {
+      "ginjal_kronis": 53.8,
+      "batu_ginjal": 87.7,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Batu Ginjal",
+    "skor_tertinggi": 87.7,
+    "passed": true
+  },
+  {
+    "id": 13,
+    "nama": "Kasus 13: Infeksi Ginjal Akut (Demam Menggigil + Sakit BAK Berat)",
+    "target": "tinggi",
+    "actual": "tinggi",
+    "skor": {
+      "ginjal_kronis": 54.0,
+      "batu_ginjal": 86.0,
+      "infeksi_ginjal": 87.7
+    },
+    "dominan": "Infeksi Ginjal / Saluran Kemih",
+    "skor_tertinggi": 87.7,
+    "passed": true
+  },
+  {
+    "id": 14,
+    "nama": "Kasus 14: Diabetes Kronis Lanjut + Bengkak Menyeluruh",
+    "target": "tinggi",
+    "actual": "tinggi",
+    "skor": {
+      "ginjal_kronis": 75.2,
+      "batu_ginjal": 53.8,
+      "infeksi_ginjal": 16.5
+    },
+    "dominan": "Ginjal Kronis",
+    "skor_tertinggi": 75.2,
+    "passed": true
+  },
+  {
+    "id": 15,
+    "nama": "Kasus 15: Tanda Bahaya Anuria / Tidak Bisa BAK & Sakit Luar Biasa",
+    "target": "darurat",
+    "actual": "darurat",
+    "skor": {
+      "ginjal_kronis": 86.0,
+      "batu_ginjal": 87.7,
+      "infeksi_ginjal": 54.0
+    },
+    "dominan": "Batu Ginjal",
+    "skor_tertinggi": 87.7,
+    "passed": true
+  }
+]
