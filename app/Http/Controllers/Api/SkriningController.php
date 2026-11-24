@@ -8,7 +8,6 @@ use App\Models\RiwayatSkrining;
 use App\Services\FuzzyServiceConnector;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class SkriningController extends Controller
 {
@@ -51,18 +50,15 @@ class SkriningController extends Controller
         } else {
             $artikelRekomendasi = $query->where(function ($q) use ($penyakitDominan, $statusLevel) {
                 $q->where('jenis_penyakit', $penyakitDominan)
-                  ->whereIn('tingkat_risiko', [$statusLevel, 'semua']);
+                    ->whereIn('tingkat_risiko', [$statusLevel, 'semua']);
             })->orWhere(function ($q) {
                 $q->where('jenis_penyakit', 'Umum')
-                  ->where('tingkat_risiko', 'semua');
+                    ->where('tingkat_risiko', 'semua');
             })->take(4)->get();
         }
 
         // 3. Simpan ke Database (Tabel riwayat_skrining)
-        $userId = Auth::id() ?? $request->input('user_id');
-
         $riwayat = RiwayatSkrining::create([
-            'user_id' => $userId,
             'nama_pasien' => $validated['nama_pasien'] ?? 'Anonim',
             'usia' => (int) $validated['usia'],
             'riwayat_kesehatan' => $validated['riwayat_kesehatan'],
@@ -100,17 +96,12 @@ class SkriningController extends Controller
     /**
      * Mengambil daftar riwayat skrining
      */
-    public function getRiwayat(Request $request): JsonResponse
+    public function getRiwayat(): JsonResponse
     {
-        $userId = Auth::id() ?? $request->query('user_id');
-
-        $query = RiwayatSkrining::query()->orderBy('created_at', 'desc');
-
-        if ($userId) {
-            $query->where('user_id', $userId);
-        }
-
-        $riwayat = $query->take(50)->get();
+        $riwayat = RiwayatSkrining::query()
+            ->orderBy('created_at', 'desc')
+            ->take(50)
+            ->get();
 
         return response()->json([
             'success' => true,

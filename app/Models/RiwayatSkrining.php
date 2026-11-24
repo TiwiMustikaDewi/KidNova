@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class RiwayatSkrining extends Model
 {
@@ -13,7 +12,6 @@ class RiwayatSkrining extends Model
     protected $table = 'riwayat_skrining';
 
     protected $fillable = [
-        'user_id',
         'nama_pasien',
         'usia',
         'riwayat_kesehatan',
@@ -52,9 +50,4 @@ class RiwayatSkrining extends Model
         'skor_infeksi_ginjal' => 'float',
         'skor_tertinggi' => 'float',
     ];
-
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
 }

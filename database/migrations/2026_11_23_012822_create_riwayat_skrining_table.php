@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('riwayat_skrining', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable()->constrained('users')->nullOnDelete();
             $table->string('nama_pasien')->nullable();
-            
+
             // 7 Input Parameters
             $table->integer('usia');
             $table->decimal('riwayat_kesehatan', 4, 1);
