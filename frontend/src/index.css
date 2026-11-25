@@ -2,6 +2,7 @@
   --color-navy: #02113e;
   --color-ink: #3f4c6b;
   --color-blue: #2000dd;
+  --color-blue-hover: #1700b0;
   --color-yellow: #ffea00;
   --color-yellow-deep: #ffd600;
   --color-red: #ff0000;
@@ -9,6 +10,12 @@
   --color-bg: #ffffff;
   --color-surface: #f8f9fc;
   --color-line: #e5eaf5;
+
+  /* Navbar specifics */
+  --navbar-bg: rgba(232, 241, 255, 0.94);
+  --navbar-border: rgba(32, 0, 221, 0.16);
+  --navbar-pill-bg: rgba(255, 255, 255, 0.94);
+  --navbar-pill-border: rgba(32, 0, 221, 0.14);
 
   --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -26,6 +33,30 @@
 
   --shadow-soft: 0 14px 36px -14px rgba(2, 17, 62, 0.08);
   --shadow-lift: 0 20px 44px -16px rgba(2, 17, 62, 0.12);
+}
+
+/* DARK MODE THEME */
+[data-theme='dark'] {
+  --color-navy: #f1f5f9;
+  --color-ink: #94a3b8;
+  --color-blue: #3d2bf0;
+  --color-blue-hover: #5844ff;
+  --color-yellow: #ffea00;
+  --color-yellow-deep: #ffd600;
+  --color-red: #ff4040;
+  --color-red-soft: rgba(255, 64, 64, 0.12);
+  --color-bg: #0d162d;
+  --color-surface: #070d1d;
+  --color-line: #1c2b4d;
+
+  /* Navbar specifics in dark */
+  --navbar-bg: rgba(8, 16, 38, 0.94);
+  --navbar-border: rgba(61, 43, 240, 0.25);
+  --navbar-pill-bg: rgba(18, 29, 58, 0.92);
+  --navbar-pill-border: rgba(61, 43, 240, 0.28);
+
+  --shadow-soft: 0 14px 36px -14px rgba(0, 0, 0, 0.4);
+  --shadow-lift: 0 20px 44px -16px rgba(0, 0, 0, 0.55);
 }
 
 *,
@@ -49,11 +80,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 ::selection {
   background-color: var(--color-yellow);
-  color: var(--color-navy);
+  color: #02113e;
 }
 
 button,
@@ -103,4 +135,266 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* UNIVERSAL CONTRAST: Semua elemen background kuning WAJIB teks hitam/navy pekat */
+.pill-yellow,
+.hero-highlight,
+.badge-solid-yellow,
+.badge-yellow,
+.label-yellow-highlight,
+.step-number-yellow,
+.btn-cta-yellow,
+.pill-link.active,
+.mobile-pill-link.active,
+.badge-yellow-outline,
+.about-card-badge.badge-yellow-outline {
+  color: #02113e !important;
+  font-weight: 700 !important;
+}
+
+/* Dark Mode Card Specific Adjustments */
+[data-theme='dark'] .hero-section {
+  background: var(--color-surface);
+}
+
+[data-theme='dark'] .hero-highlight {
+  background: var(--color-yellow) !important;
+  color: #02113e !important;
+}
+
+[data-theme='dark'] .pill-yellow {
+  background: var(--color-yellow) !important;
+  color: #02113e !important;
+}
+
+[data-theme='dark'] .badge-solid-yellow {
+  background: var(--color-yellow) !important;
+  color: #02113e !important;
+}
+
+[data-theme='dark'] .step-number-yellow {
+  background: var(--color-yellow) !important;
+  color: #02113e !important;
+}
+
+[data-theme='dark'] .label-yellow-highlight {
+  background: var(--color-yellow) !important;
+  color: #02113e !important;
+}
+
+[data-theme='dark'] .bento-yellow {
+  background: #0f1c3d !important;
+  border-color: rgba(255, 234, 0, 0.45) !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme='dark'] .bento-yellow .bento-heading {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .bento-yellow .bento-desc {
+  color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .bento-blue {
+  background: var(--color-blue);
+  color: #ffffff;
+}
+
+[data-theme='dark'] .step-card,
+[data-theme='dark'] .question-card,
+[data-theme='dark'] .edu-card {
+  background: #0d162d !important;
+  border-color: var(--color-line) !important;
+}
+
+[data-theme='dark'] .step-card .card-title,
+[data-theme='dark'] .edu-card .card-title {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .step-card .card-body,
+[data-theme='dark'] .edu-card .card-body {
+  color: #94a3b8 !important;
+}
+
+[data-theme='dark'] .edu-symptom-text {
+  color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .cta-banner {
+  background: #0d1a38 !important;
+  border: 1px solid #1e3260 !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme='dark'] .cta-banner-title {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .cta-banner-content .bento-badge {
+  background: rgba(255, 234, 0, 0.18) !important;
+  color: #ffea00 !important;
+}
+
+[data-theme='dark'] .btn-cta-yellow {
+  background: var(--color-yellow) !important;
+  color: #02113e !important;
+}
+
+[data-theme='dark'] .btn-cta-yellow:hover {
+  background: #ffffff !important;
+  color: #02113e !important;
+}
+
+[data-theme='dark'] .danger-banner {
+  background: rgba(255, 64, 64, 0.12) !important;
+  border-color: rgba(255, 64, 64, 0.35) !important;
+}
+
+[data-theme='dark'] .danger-banner-title {
+  color: #ff8080 !important;
+}
+
+[data-theme='dark'] .danger-banner .card-body,
+[data-theme='dark'] .danger-banner-right strong {
+  color: #f1f5f9 !important;
+}
+
+[data-theme='dark'] .about-card {
+  background: #0d162d !important;
+  border-color: var(--color-line) !important;
+}
+
+[data-theme='dark'] .about-card:hover {
+  background: #111d38 !important;
+}
+
+[data-theme='dark'] .about-card-title {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .about-card-desc {
+  color: #94a3b8 !important;
+}
+
+[data-theme='dark'] .about-card-highlight {
+  background: #060b18 !important;
+  border: 1px solid #1e3260 !important;
+}
+
+[data-theme='dark'] .about-card-highlight .about-card-title {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .about-card-highlight .about-card-desc {
+  color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .btn-secondary {
+  background: var(--color-bg);
+  border-color: var(--color-line);
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .btn-secondary:hover {
+  background: var(--color-surface);
+  border-color: var(--color-blue);
+}
+
+[data-theme='dark'] .about-check-list li {
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .footer {
+  background: #050a17 !important;
+  border-top-color: #1c2b4d !important;
+}
+
+[data-theme='dark'] .footer-logo {
+  color: #f1f5f9 !important;
+}
+
+[data-theme='dark'] .footer-link {
+  color: #94a3b8 !important;
+}
+
+[data-theme='dark'] .footer-link:hover {
+  color: #ffea00 !important;
+}
+
+[data-theme='dark'] .footer-copy,
+[data-theme='dark'] .footer-note {
+  color: #64748b !important;
+}
+
+/* Detection Page Dark Mode */
+[data-theme='dark'] .detection-view {
+  background: #070d1d !important;
+}
+
+[data-theme='dark'] .question-card {
+  background: #0d162d !important;
+  border-color: #1c2b4d !important;
+}
+
+[data-theme='dark'] .question-title {
+  color: #f1f5f9 !important;
+}
+
+[data-theme='dark'] .bp-readout .bp-number {
+  color: #f1f5f9 !important;
+}
+
+[data-theme='dark'] .bp-scale span {
+  color: #94a3b8 !important;
+}
+
+[data-theme='dark'] .bp-checkbox-row span {
+  color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .pain-card {
+  background: #070d1d !important;
+  border-color: #1c2b4d !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme='dark'] .option-pill {
+  background: #070d1d !important;
+  border-color: #1c2b4d !important;
+  color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .option-pill.active {
+  background: var(--color-blue) !important;
+  border-color: var(--color-blue) !important;
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .result-panel {
+  border-color: var(--color-line);
+}
+
+[data-theme='dark'] .medical-note-card,
+[data-theme='dark'] .references-card {
+  background: #0d162d !important;
+  border-color: #1c2b4d !important;
+}
+
+[data-theme='dark'] .medical-note-title,
+[data-theme='dark'] .references-title {
+  color: #f1f5f9 !important;
+}
+
+[data-theme='dark'] .reference-link {
+  background: #070d1d !important;
+  border-color: #1c2b4d !important;
+  color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .reference-link:hover {
+  border-color: var(--color-blue) !important;
+  color: #ffffff !important;
 }
